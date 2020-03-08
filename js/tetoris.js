@@ -33,7 +33,6 @@ window.onload = function () {
     }
     //エリアの設定
     canvas = document.querySelector("#canvas");
-    setStyleSheet();
     ctx = canvas.getContext("2d");
     //テトリミノをランダムで取得
     current_mino = getMino();
@@ -74,8 +73,6 @@ window.onload = function () {
 function render() {
     //全ての描写を削除する
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
-    //見やすいように背景でグリットを表示する
-    drawGragh();
     //fix したところを都度描写する
     for (var y = 0; y < ROWS; y++) {
         for (var x = 0; x < COLS; x++) {
